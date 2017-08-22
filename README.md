@@ -17,10 +17,10 @@ For client end use:
     for epoch in range(n_epochs):
         loss = get_loss()
         acc = get_acc()
-        tm.logger.add_scalar('acc', acc, epoch)
-        tm.logger.add_scalar('loss', loss, epoch)
+        logger.add_scalar('acc', acc, epoch)
+        logger.add_scalar('loss', loss, epoch)
 
 For server end use:
 
-    export TM_DAEMON_PATH=""
+    export TM_DAEMON_PATH=[installation directory]
      $(TM_DAEMON_PATH)/tm_daemon.sh DIR PORT
