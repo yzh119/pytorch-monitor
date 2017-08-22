@@ -1,0 +1,1 @@
+python training_monitor/server.py --dir "$(pwd)/$2" --port "$3"
