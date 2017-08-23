@@ -7,6 +7,17 @@ A naive tool to visualize training process with the help of [chart.js](http://ww
 - [Tornado](http://www.tornadoweb.org/en/stable/)
 - [Chart.js](http://www.chartjs.org/)
 
+## Install
+
+Add this line to your `.bashrc`:
+
+	export PYTHONPATH=[clone path]/training_monitor:$PYTHONPATH
+
+Then run the following command in your terminal:
+
+	source ~/.bashrc
+
+
 ## Usage
 
 For client end use:
