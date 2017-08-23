@@ -1,4 +1,3 @@
-import socket
 import json
 import os
 
@@ -20,7 +19,7 @@ class Logger(object):
             with open(json_path) as f:
                 upd = json.load(f)
             data = upd['data']
-        except FileNotFoundError:
+        except IOError:
             upd = {'label': var_name}
             data = []
 

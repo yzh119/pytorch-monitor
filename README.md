@@ -22,8 +22,7 @@ For client end use:
 
 For server end use:
 
-    export TM_DAEMON_PATH=[installation directory]
-     $(TM_DAEMON_PATH)/tm_daemon.sh DIR PORT
+    python -m training_monitor -p PORT -d DIR
 
 ## Reference
 
