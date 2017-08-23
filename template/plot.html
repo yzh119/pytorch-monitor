@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plot</title>
+</head>
+<body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+<canvas id="myChart"></canvas>
+<script type="application/javascript">
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var text = '{% raw data %}';
+    var obj = JSON.parse(text);
+    var data = {datasets: [obj]};
+    var myChart = new Chart(ctx, {type: "line", data: data});
+</script>
+</body>
+</html>

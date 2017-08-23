@@ -1,5 +1,5 @@
 # Training Monitor
-A naive tool to visualize the training process with the help of [chart.js](http://www.chartjs.org/).
+A naive tool to visualize training process with the help of [chart.js](http://www.chartjs.org/).
 
 ## Requirements
 
@@ -24,3 +24,8 @@ For server end use:
 
     export TM_DAEMON_PATH=[installation directory]
      $(TM_DAEMON_PATH)/tm_daemon.sh DIR PORT
+
+## Reference
+
+- https://github.com/tornadoweb/tornado/tree/stable/demos/chat
+- https://github.com/Determinant/lab_monitor/
