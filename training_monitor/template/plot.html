@@ -13,12 +13,12 @@
     var ctx = document.getElementById('myChart').getContext('2d');
     var text = '{% raw data %}';
     var obj = JSON.parse(text);
-    var n = obj.data.length;
+    var n = obj[0].data.length;
     var labels = [];
     for (var i = 0; i < n; i++) {
-        labels.push(obj.data[i].x);
+        labels.push(obj[0].data[i].x);
     }
-    var data = {labels: labels, datasets: [obj]};
+    var data = {labels: labels, datasets: obj};
     var myChart = new Chart(ctx, {type: "line", data: data});
 </script>
 </body>

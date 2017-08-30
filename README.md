@@ -1,6 +1,11 @@
 # Training Monitor
 A naive tool to visualize training process with the help of [chart.js](http://www.chartjs.org/).
 
+## Features
+Visualize multiple variables at a time is supported now.
+
+Just fill in the blanks with `varname1+varname+...` (split by `+`).
+
 ## Requirements
 
 - Python 2.7
@@ -22,14 +27,16 @@ Then run the following command in your terminal:
 
 For client end use:
 
-    import training_monitor.logger as tmlog
+```python
+import training_monitor.logger as tmlog
 
-    logger = tmlog.Logger('train_v0.1')
-    for epoch in range(n_epochs):
-        loss = get_loss()
-        acc = get_acc()
-        logger.add_scalar('acc', acc, epoch)
-        logger.add_scalar('loss', loss, epoch)
+logger = tmlog.Logger('train_v0.1')
+for epoch in range(n_epochs):
+    loss = get_loss()
+    acc = get_acc()
+    logger.add_scalar('acc', acc, epoch)
+    logger.add_scalar('loss', loss, epoch)
+```
 
 For server end use:
 

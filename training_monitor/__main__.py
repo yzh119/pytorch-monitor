@@ -16,12 +16,17 @@ class MainPageHandler(tornado.web.RequestHandler):
 
 
 class PlotHandler(tornado.web.RequestHandler):
-    def get(self, plot_path):
+    def get(self, mixed_path):
         try:
-            with open(os.path.join(info_dir, plot_path + '.json'), 'r') as f:
-                data = json.load(f)
-                self.render("plot.html", data=json.dumps(data))
-        except FileNotFoundError:
+            plot_paths = mixed_path.split('+')
+            data = []
+            for plot_path in plot_paths:
+                with open(os.path.join(info_dir, plot_path + '.json'), 'r') as f:
+                    data.append(json.load(f))
+            
+            self.render("plot.html", data=json.dumps(data))
+        
+        except IOError:
             self.write("File Not Found!")
 
 
