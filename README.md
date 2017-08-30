@@ -2,9 +2,9 @@
 A naive tool to visualize training process with the help of [chart.js](http://www.chartjs.org/).
 
 ## Features
-Visualize multiple variables at a time is supported now.
+Monitor several variables simultaneously is supported now.
 
-Just fill in the blanks with `varname1+varname+...` (split by `+`).
+Just fill in the blanks with `varname1+varname2+...+varnamek` (split by `+`).
 
 ## Requirements
 
