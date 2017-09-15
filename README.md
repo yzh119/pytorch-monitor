@@ -4,7 +4,7 @@ A naive tool to visualize training process with the help of [chart.js](http://ww
 ## Features
 Monitor several variables simultaneously is supported now.
 
-Just fill in the blanks with `varname1+varname2+...+varnamek` (split by `+`).
+Just fill in the blank with variable names(seperated by '`+`): `varname1+varname2+...+varnamek`.
 
 ## Requirements
 
@@ -14,14 +14,9 @@ Just fill in the blanks with `varname1+varname2+...+varnamek` (split by `+`).
 
 ## Install
 
-Add this line to your `.bashrc`:
-
-	export PYTHONPATH=[clone path]/training_monitor:$PYTHONPATH
-
-Then run the following command in your terminal:
-
-	source ~/.bashrc
-
+```bash
+make install
+```
 
 ## Usage
 
