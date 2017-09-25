@@ -1,2 +1,2 @@
-install: build
+install:
 	python setup.py install
