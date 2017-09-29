@@ -1,7 +1,8 @@
+from __future__ import division
 import json
 import os
 
-log_upper_bound = 100000
+log_upper_bound = 1000000
 
 
 class Logger(object):
@@ -24,7 +25,13 @@ class Logger(object):
                 upd = json.load(f)
             data = upd['data']
         except IOError:
-            upd = {'label': var_name, 'fill': False, 'strokeColor': 'red'}
+            rgb = hash(var_name)
+            r = rgb % 256
+            rgb = rgb // 256
+            g = rgb % 256
+            rgb = rgb // 256
+            b = rgb % 256
+            upd = {'label': var_name, 'fill': False, 'borderColor': 'rgb({},{},{})'.format(r, g, b)}
             data = []
 
         data.append({'x': timestamp, 'y': val})
