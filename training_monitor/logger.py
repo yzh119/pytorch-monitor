@@ -10,6 +10,10 @@ class Logger(object):
         self.counter = 0
         if not os.path.exists(self.path):
             os.mkdir(self.path)
+        else:
+            for the_file in os.listdir(self.path):
+                file_path = os.path.join(self.path, the_file)
+                os.unlink(file_path)
 
     def add_scalar(self, var_name, val, timestamp):
         self.counter += 1
@@ -20,7 +24,7 @@ class Logger(object):
                 upd = json.load(f)
             data = upd['data']
         except IOError:
-            upd = {'label': var_name}
+            upd = {'label': var_name, 'fill': False, 'strokeColor': 'red'}
             data = []
 
         data.append({'x': timestamp, 'y': val})
