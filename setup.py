@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='training_monitor',
-    version='0.1.1',
+    version='0.1.2',
     packages=['training_monitor'],
     package_dir={'training_monitor': 'training_monitor'},
     package_data={'training_monitor': ['template/*.html']},
