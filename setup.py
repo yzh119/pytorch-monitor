@@ -5,7 +5,7 @@ setup(
     version='0.1.1',
     packages=[''],
     package_dir={'': 'training_monitor'},
-    package_data={'': ['training_monitor/template/index.html', 'training_monitor/template/plot.html']},
+    package_data={'': ['template/index.html', 'template/plot.html']},
     url='https://github.com/yzh119/training_monitor',
     license='GNU General Public License v3.0',
     author='expye',
