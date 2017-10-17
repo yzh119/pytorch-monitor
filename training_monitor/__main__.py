@@ -14,7 +14,7 @@ class MainPageHandler(tornado.web.RequestHandler):
 <html lang=\"en\">\
 <head>\
     <meta charset=\"UTF-8\">\
-    <title>{{dir}}</title>\
+    <title>Training Monitor</title>\
 </head>\
 <body><p>Select the log you would like to monitor</p>" +
             " ".join(["<p><a href=\"dir/" + log_dirname + "\">" + log_dirname + "</a></p>" for log_dirname in log_dirs]) +
