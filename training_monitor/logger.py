@@ -16,6 +16,10 @@ class Logger(object):
                 file_path = os.path.join(self.path, the_file)
                 os.unlink(file_path)
 
+    def add_dist(self):
+        # TODO
+        pass
+
     def add_scalar(self, var_name, val, timestamp):
         self.counter += 1
         assert self.counter < log_upper_bound, "Log Limit Exceeded."
@@ -40,10 +44,10 @@ class Logger(object):
             json.dump(upd, f)
 
 if __name__ == '__main__':
-    log = Logger('try')
-    log.add_scalar('acc', 50, 1)
-    log.add_scalar('acc', 40, 2)
+    log = Logger('try1')
+    log.add_scalar('acc', 40, 1)
+    log.add_scalar('acc', 50, 2)
     log.add_scalar('acc', 60, 3)
-    log.add_scalar('loss', 5, 1)
+    log.add_scalar('loss', 3, 1)
     log.add_scalar('loss', 4, 2)
-    log.add_scalar('loss', 3, 3)
+    log.add_scalar('loss', 5, 3)

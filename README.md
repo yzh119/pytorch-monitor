@@ -2,10 +2,9 @@
 A naive tool to visualize training process with the help of [chart.js](http://www.chartjs.org/).
 
 ## Features
-Monitor several variables simultaneously is supported now.
-
-Just fill in the blank with variable names(seperated by '`+`): `varname1+varname2+...+varnamek`.
-
+- [x] Monitor several variables simultaneously is supported now.
+  - Just fill in the blank with variable names(seperated by '`+`'): `varname1+varname2+...+varnamek`.
+- [x] Monitor several logs is supported now.
 ## Requirements
 
 - Python 2.7
