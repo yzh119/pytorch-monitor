@@ -28,6 +28,8 @@ class DirHanlder(tornado.web.RequestHandler):
         self.render("index.html", dir=log_dirname)
 
     def post(self, log_dirname):
+        if log_dirname.endswite('/'):
+			log_dirname = log_dirname[:-1]
         self.redirect("/plot/" + log_dirname + "/" + self.get_argument('plot_name'))
 
 
@@ -50,7 +52,7 @@ class PlotHandler(tornado.web.RequestHandler):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser("Training Monitor")
     parser.add_argument("-p", "--port", type=int, default=1111)
-    parser.add_argument("-d", "--dir", type=str, action='append', default=['try', 'try1'])
+    parser.add_argument("-d", "--dir", type=str, action='append', default=[])
     args = parser.parse_args()
 
     log_dirs = args.dir
