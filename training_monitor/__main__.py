@@ -28,7 +28,7 @@ class DirHanlder(tornado.web.RequestHandler):
         self.render("index.html", dir=log_dirname)
 
     def post(self, log_dirname):
-        if log_dirname.endswite('/'):
+        if log_dirname.endswith('/'):
 			log_dirname = log_dirname[:-1]
         self.redirect("/plot/" + log_dirname + "/" + self.get_argument('plot_name'))
 

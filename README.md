@@ -34,7 +34,7 @@ for epoch in range(n_epochs):
 
 For server end use:
 
-    python -m training_monitor -p PORT -d DIR
+    python -m training_monitor -p PORT -d DIR1 [-d DIR2 ...]
 
 ## Reference
 
